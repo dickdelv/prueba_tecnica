@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Facturas</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover text-center">
+                <thead>
+                    <tr>
+                        <th>Num Factura</th>
+                        <th>Cliente</th>
+                        <th>Fecha Factura</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr *ngFor="let factura of facturas" class="text-center">
+                    <td>{{factura.id}}</td>
+                    <td>{{factura.id_cliente}}</td>
+                    <td>{{factura.fecha | date: 'shortDate'}}</td>
+                    <td class="btn btn-danger">Borrar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
